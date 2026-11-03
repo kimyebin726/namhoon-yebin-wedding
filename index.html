@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>남훈 ♥ 예빈 결혼식에 초대합니다</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="남훈 ♥ 예빈 결혼식에 초대합니다">
+<meta property="og:description" content="첫 시작을 함께 축복해주세요">
+<meta property="og:image" content="https://YOUR-DOMAIN/assets/og.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="400">
+<meta property="og:url" content="https://YOUR-DOMAIN/">
+<meta name="description" content="첫 시작을 함께 축복해주세요">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Gowun+Batang:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;background:#E4ABA6;-webkit-font-smoothing:antialiased}
+a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}50%{box-shadow:0 0 0 8px rgba(255,255,255,0)}}
+@keyframes petal{0%{transform:translate3d(0,-30px,0) rotate(0deg);opacity:0}8%{opacity:.95}25%{transform:translate3d(28px,25vh,0) rotate(90deg)}50%{transform:translate3d(-12px,52vh,0) rotate(200deg)}75%{transform:translate3d(34px,80vh,0) rotate(290deg)}92%{opacity:.9}100%{transform:translate3d(6px,108vh,0) rotate(380deg);opacity:0}}
+</style>
+</helmet>
+<div style="max-width:430px;margin:0 auto;background:#ECB6B1;color:#fff;font-family:'Gowun Batang',serif;font-weight:700;text-rendering:optimizeLegibility;overflow:hidden;position:relative;box-shadow:0 0 40px rgba(120,60,55,.15)">
+
+  <!-- HERO -->
+  <section data-screen-label="01 Hero" style="text-shadow:none;padding:72px 24px 36px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px">
+    <div style="font-size:15px;letter-spacing:.04em">남훈 <span style="color:#fff">♥</span> 예빈, 결혼합니다!</div>
+    <h1 style="margin:6px 0 0;font-family:'Pinyon Script',cursive;font-weight:400;font-size:62px;line-height:.98;color:#FBF3EE">The Chapel<br>at Daechi</h1>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.04em;margin-top:4px;white-space:nowrap">2027<span style="font-family:'Gowun Batang';font-size:17px">년</span> 04. 10<span style="font-family:'Gowun Batang';font-size:17px">일</span></div>
+  </section>
+  <div style="height:1px;background:rgba(255,255,255,.85)"></div>
+
+  <!-- COLLAGE -->
+  <section data-screen-label="02 Collage" style="margin:36px 0 10px;padding:0 3%">
+    <img data-reveal="1" src="assets/collage3.png" alt="저희의 가장 행복한 순간에, 함께하고 싶은 당신을 초대합니다! - 남훈 ♡ 예빈 가족 일동 -" style="width:100%;display:block">
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section data-screen-label="03 Countdown" style="text-shadow:none;padding:30px 20px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px">
+    <h2 style="margin:0;font-family:'Pinyon Script',cursive;font-weight:400;font-size:44px;color:#FBF3EE;line-height:1">We hope you can join us!</h2>
+    <div style="display:flex;align-items:flex-start;gap:10px;font-family:'Cormorant Garamond',serif">
+      <sc-for list="{{ countdown }}" as="u" hint-placeholder-count="4">
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px;min-width:38px">
+            <span style="font-size:24px;font-weight:600;letter-spacing:.06em;font-variant-numeric:tabular-nums">{{ u.v }}</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.2em">{{ u.l }}</span>
+          </div>
+          <sc-if value="{{ u.sep }}" hint-placeholder-val="{{ true }}"><span style="font-size:22px">:</span></sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font-size:15px;white-space:nowrap">예식까지 <b>{{ daysLeft }}</b>일 남았습니다</div>
+  </section>
+
+  <!-- PHOTO BOOTH -->
+  <section data-screen-label="04 Photo booth" style="padding:56px 0 40px;display:flex;flex-direction:column;align-items:center;gap:22px">
+    <button onClick="{{ push }}" style="width:180px;height:34px;border-radius:12px;border:2px solid #C9A46E;background:linear-gradient(180deg,#FFFCF5 0%,#F3E6D0 45%,#E6D2B2 55%,#FAF1E2 100%);box-shadow:0 3px 0 #A9824F,0 6px 14px rgba(110,70,40,.3),inset 0 1px 0 #fff;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;letter-spacing:.14em;color:#6B4A2C;cursor:pointer;transition:transform .1s" style-active="transform:translateY(3px);box-shadow:0 0 0 #A9824F,0 2px 6px rgba(110,70,40,.3)">{{ pushLabel }}</button>
+    <div style="width:58%;aspect-ratio:232/435;padding:10px;box-sizing:border-box;background:linear-gradient(120deg,#3E2814 0%,#C9A57C 14%,#6E4C2C 26%,#F4DDBA 44%,#8A6440 58%,#E9CBA1 74%,#4A3019 90%,#B48D61 100%);border-radius:3px;box-shadow:0 18px 30px rgba(90,45,35,.35),inset 0 0 0 1px rgba(0,0,0,.4)">
+      <div style="height:100%;padding:8px;box-sizing:border-box;background:linear-gradient(200deg,#F0D9B5,#7C5A36 30%,#E8CFA8 60%,#5C3E22);box-shadow:inset 0 0 0 1px rgba(0,0,0,.45)">
+        <div style="position:relative;height:100%;overflow:hidden;background:linear-gradient(180deg,#A8957C 0%,#D3C4AE 8%,#C9B9A2 70%,#B9A88F 100%);box-shadow:inset 0 10px 18px rgba(40,25,10,.45),inset 0 -6px 12px rgba(255,255,255,.25),inset 8px 0 14px rgba(40,25,10,.25),inset -8px 0 14px rgba(40,25,10,.25)">
+          <div style="position:absolute;left:50%;top:5%;width:58%;margin-left:-29%;transform:{{ stripTransform }};transition:{{ stripTransition }};background:#161414;padding:3px;box-sizing:border-box;display:flex;flex-direction:column;gap:3px;box-shadow:0 6px 12px rgba(0,0,0,.35)">
+            <div style="aspect-ratio:84/78"><image-slot id="b1" src="assets/b1.jpg" shape="rect" placeholder="booth 1"></image-slot></div>
+            <div style="aspect-ratio:84/75"><image-slot id="b2" src="assets/b2.jpg" shape="rect" placeholder="booth 2"></image-slot></div>
+            <div style="aspect-ratio:84/73"><image-slot id="b3" src="assets/b3.jpg" shape="rect" placeholder="booth 3"></image-slot></div>
+            <div style="aspect-ratio:84/80"><image-slot id="b4" src="assets/b4.jpg" shape="rect" placeholder="booth 4"></image-slot></div>
+          </div>
+          <div style="position:absolute;inset:0;background:#fff;pointer-events:none;opacity:{{ flashOpacity }};transition:opacity .5s ease-out"></div>
+          <sc-if value="{{ showHint }}" hint-placeholder-val="{{ true }}">
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#6B4A2C;text-align:center;font-size:12px;line-height:1.6;pointer-events:none">
+              <span style="font-family:'Cormorant Garamond';font-size:13px;letter-spacing:.3em">PHOTO BOOTH</span>
+              <span>위의 버튼을 눌러<br>사진을 뽑아보세요</span>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GREETING -->
+  <section data-screen-label="05 Greeting" style="position:relative;margin-top:30px">
+    <div style="position:relative;aspect-ratio:402/590">
+      <image-slot id="illo" src="assets/illo.png" shape="rect" placeholder="line illustration"></image-slot>
+      <div data-reveal="1" style="position:absolute;left:24%;right:24%;top:37.5%;height:16%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:min(2.6vw,11px);text-align:center;font-size:min(2.9vw,12px);line-height:1.6;color:#FFFDF8;pointer-events:none;white-space:nowrap">
+        <p style="margin:0">풋풋했던 대학 시절에 만나,<br>다섯 번의 봄을 함께 맞이하며<br>서로의 꿈을 응원하고<br>일상의 기쁨과 슬픔을 나누었습니다.</p>
+        <p style="margin:0">그리고 여섯 번째 봄,<br>이제는 부부로서 새로운 계절을 맞이합니다.<br>저희의 시작을 함께 축복해 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMORY -->
+  <section data-screen-label="06 Memory" style="padding-top:120px">
+    <h2 style="margin:0 0 30px;text-align:center;font-family:'Pinyon Script',cursive;font-weight:400;font-size:52px;color:#FBF3EE">Memory</h2>
+    <div style="background:#F4F1EB;border-radius:50% 50% 50% 50% / 90px 90px 90px 90px;padding:64px 9% 110px">
+      <div style="display:grid;grid-template-columns:{{ gridCols }};gap:12px 12px">
+        <sc-for list="{{ memory }}" as="m" hint-placeholder-count="12">
+          <div onClick="{{ m.open }}" style="aspect-ratio:{{ m.ratio }};cursor:zoom-in;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-top:{{ m.gap }}">
+            <image-slot id="{{ m.id }}" src="{{ m.src }}" shape="rect" placeholder="photo"></image-slot>
+          </div>
+        </sc-for>
+      </div>
+      <div style="text-align:center;margin-top:26px;font-size:12px;color:#A26F69;text-shadow:none;letter-spacing:.06em">사진을 누르면 크게 볼 수 있어요</div>
+    </div>
+  </section>
+
+  <!-- MORE -->
+  <section data-screen-label="07 More" style="padding:110px 10% 0">
+    <h2 style="margin:0 0 50px;text-align:center;font-family:'Pinyon Script',cursive;font-weight:400;font-size:52px;color:#FBF3EE">More</h2>
+    <div style="display:grid;grid-template-columns:minmax(0,201fr) minmax(0,115fr);gap:4px">
+      <div style="display:grid;gap:4px">
+        <div onClick="{{ openC1 }}" style="aspect-ratio:202/125;cursor:zoom-in"><image-slot id="more1" src="assets/more1.jpg" shape="rect" placeholder="photo"></image-slot></div>
+        <div onClick="{{ openC2 }}" style="aspect-ratio:202/125;cursor:zoom-in"><image-slot id="more2" src="assets/more2.jpg" shape="rect" placeholder="photo"></image-slot></div>
+      </div>
+      <div onClick="{{ openC3 }}" style="cursor:zoom-in;position:relative;min-height:0;min-width:0"><div style="position:absolute;inset:0"><image-slot id="more-strip" src="assets/more-strip.jpg" shape="rect" placeholder="photo strip"></image-slot></div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,86fr) minmax(0,114fr) minmax(0,115fr);gap:4px;margin-top:4px">
+      <div onClick="{{ openC4 }}" style="aspect-ratio:1;cursor:zoom-in"><image-slot id="more3" src="assets/more3.jpg" shape="rect" placeholder="photo"></image-slot></div>
+      <div onClick="{{ openC5 }}" style="aspect-ratio:114/86;cursor:zoom-in"><image-slot id="more4" src="assets/more4.jpg" shape="rect" placeholder="photo"></image-slot></div>
+      <div onClick="{{ openC6 }}" style="aspect-ratio:115/86;cursor:zoom-in"><image-slot id="more5" src="assets/more5.jpg" shape="rect" placeholder="photo"></image-slot></div>
+    </div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section data-screen-label="08 Calendar" style="padding:130px 11% 0;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:500;letter-spacing:.02em;margin-bottom:34px">2027.04</div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);font-size:15px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.85)">
+      <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);row-gap:8px;padding-top:18px;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;font-weight:600">
+      <sc-for list="{{ cells }}" as="c" hint-placeholder-count="35">
+        <div style="height:36px;display:flex;align-items:center;justify-content:center">
+          <sc-if value="{{ c.isDay }}" hint-placeholder-val="{{ false }}">
+            <span style="width:34px;height:34px;border-radius:50%;background:#fff;color:#D98C85;display:flex;align-items:center;justify-content:center;animation:pulse 2.2s infinite">{{ c.d }}</span>
+          </sc-if>
+          <sc-if value="{{ c.plain }}" hint-placeholder-val="{{ true }}"><span>{{ c.d }}</span></sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:30px;font-size:16px;letter-spacing:.06em">2027년 4월 10일 토요일 · 17:00</div>
+  </section>
+
+  <!-- LOCATION -->
+  <section data-screen-label="09 Location" style="padding:120px 9% 90px;text-align:center;display:flex;flex-direction:column;align-items:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:.5em;margin-right:-.5em">LOCATION</div>
+    <div style="margin-top:22px;position:relative;width:34px;height:40px;border:2px solid rgba(255,255,255,.9);border-bottom:none;border-radius:17px 17px 0 0;box-sizing:border-box">
+      <div style="position:absolute;inset:5px 5px 0;border:1.5px solid rgba(255,255,255,.9);border-bottom:none;border-radius:12px 12px 0 0"></div>
+    </div>
+    <div style="font-family:'Pinyon Script',cursive;font-size:28px;line-height:.8;margin-top:-6px">Chapel</div>
+    <div style="font-size:24px;font-weight:700;letter-spacing:.12em;margin-top:16px">더 채플 앳 대치</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.38em;margin-top:6px">THE CHAPEL AT DAECHI</div>
+    <div style="font-size:14px;margin-top:16px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px">
+      <span>서울특별시 강남구 영동대로 318</span>
+      <a href="tel:025541121" style="color:#fff;text-decoration:none">Tel. 02 554 1121</a>
+    </div>
+    <div style="width:100%;aspect-ratio:263/253;margin-top:24px;position:relative;border:1.5px solid #fff;border-radius:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;font-size:min(2.5vw,10.5px);font-weight:500;color:#fff;text-shadow:none">
+      <div style="position:absolute;left:46.5%;width:7%;top:3%;bottom:4%;border:1.5px solid #fff;border-radius:14px;box-sizing:border-box"></div>
+      <div style="position:absolute;left:47.5%;width:5%;top:24%;display:flex;flex-direction:column;align-items:center;gap:0;font-size:min(2.3vw,10px);line-height:1.05;writing-mode:horizontal-tb">
+        <span style="margin-top:18%">영</span><span>동</span><span>대</span><span>로</span>
+      </div>
+      <div style="position:absolute;left:18%;right:18%;top:62.3%;height:1.6%;background:#fff;border-radius:4px"></div>
+      <div style="position:absolute;left:48%;width:4%;top:18%;height:2.4%;background:repeating-linear-gradient(90deg,#fff 0 1.5px,transparent 1.5px 3.5px)"></div>
+      <div style="position:absolute;left:48%;width:4%;top:31%;height:2.4%;background:repeating-linear-gradient(90deg,#fff 0 1.5px,transparent 1.5px 3.5px)"></div>
+      <div style="position:absolute;left:48%;width:4%;top:58%;height:2.4%;background:repeating-linear-gradient(90deg,#fff 0 1.5px,transparent 1.5px 3.5px)"></div>
+      <div style="position:absolute;left:48%;width:4%;top:67%;height:2.4%;background:repeating-linear-gradient(90deg,#fff 0 1.5px,transparent 1.5px 3.5px)"></div>
+      <div style="position:absolute;left:48%;width:4%;top:79%;height:2.4%;background:repeating-linear-gradient(90deg,#fff 0 1.5px,transparent 1.5px 3.5px)"></div>
+      <div style="position:absolute;left:25%;right:26%;top:9%;height:6%;border:1.5px solid #fff;border-radius:20px;background:#ECB6B1;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:min(3vw,12.5px)">2호선 삼성역</div>
+      <div style="position:absolute;left:24%;right:24%;top:84.5%;height:6%;border:1.5px solid #fff;border-radius:20px;background:#ECB6B1;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:min(3vw,12.5px)">3호선 학여울역</div>
+      <span style="position:absolute;left:40.5%;top:16.5%;width:16px;height:16px;border-radius:50%;background:#fff;color:#E3A49E;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span>
+      <span style="position:absolute;left:55%;top:16.5%;width:16px;height:16px;border-radius:50%;background:#fff;color:#E3A49E;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span>
+      <span style="position:absolute;left:54.5%;top:92%;width:16px;height:16px;border-radius:50%;background:#fff;color:#E3A49E;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span>
+      <div style="position:absolute;right:59%;top:22.5%;display:flex;flex-direction:column;align-items:flex-end;gap:min(2.4vw,10px);white-space:nowrap">
+        <span>세아빌딩 •</span><span>오토웨이타워 •</span><span>씨잇갤러리 • <b style="border:1.2px solid #fff;border-radius:50%;padding:0 3px;font-size:.85em">B</b></span><span>자이갤러리 •</span><span>BMW •</span>
+      </div>
+      <div style="position:absolute;right:58%;top:67.5%;display:flex;flex-direction:column;align-items:flex-end;gap:min(1.4vw,6px);white-space:nowrap">
+        <span>삼성디지털스토어 •</span><span style="margin-right:14%">은마아파트 •</span><span>스타벅스 •</span>
+      </div>
+      <div style="position:absolute;left:58%;top:27%;display:flex;flex-direction:column;gap:min(1.2vw,5px);white-space:nowrap">
+        <span>• KT&amp;G 타워</span><span>• 제네시스</span>
+      </div>
+      <div style="position:absolute;left:58.5%;top:46%;width:13px;height:13px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#fff"></div>
+      <div style="position:absolute;left:67.5%;top:38%;width:22%;height:15%;border:1.5px solid #fff;border-radius:6px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px">
+        <span style="font-family:'Pinyon Script',cursive;font-weight:400;font-size:min(4.2vw,17px);line-height:.9">Chapel</span>
+        <span style="font-weight:700;font-size:min(2.3vw,9.5px)">더채플앳대치</span>
+      </div>
+      <div style="position:absolute;left:58%;top:55.5%;white-space:nowrap"><b style="border:1.2px solid #fff;border-radius:50%;padding:0 3px;font-size:.85em">B</b> • 오뚜기</div>
+      <div style="position:absolute;left:58%;top:67.5%;display:flex;flex-direction:column;gap:min(1.4vw,6px);white-space:nowrap">
+        <span>• 대치우성1차아파트</span><span>• 대치쌍용2차아파트</span><span>• LG전자베스트샵</span>
+      </div>
+    </div>
+    <div style="width:100%;margin-top:16px;background:#fff;overflow:hidden">
+      <iframe src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%98%81%EB%8F%99%EB%8C%80%EB%A1%9C%20318&amp;z=16&amp;output=embed" title="더 채플 앳 대치 지도" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;border:0"></iframe>
+      <div style="display:flex;align-items:center;background:#F2EEEC;text-shadow:none">
+        <a href="https://map.naver.com/p/search/%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EB%8C%80%EC%B9%98" target="_blank" style="flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;color:#3A3336;text-decoration:none;font-size:14px;font-weight:700" style-hover="background:#EAE5E3"><span style="width:22px;height:22px;border-radius:5px;background:#03C75A;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:700">N</span>네이버 지도</a>
+        <span style="width:1px;height:24px;background:#D6D0CE"></span>
+        <a href="https://map.kakao.com/link/to/%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EB%8C%80%EC%B9%98,37.5037,127.0640" target="_blank" style="flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;color:#3A3336;text-decoration:none;font-size:14px;font-weight:700" style-hover="background:#EAE5E3"><span style="width:22px;height:22px;border-radius:5px;background:#FEE500;color:#3A1D1D;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:700">K</span>카카오 내비</a>
+        <span style="width:1px;height:24px;background:#D6D0CE"></span>
+        <a href="tmap://route?goalname=%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EB%8C%80%EC%B9%98&amp;goalx=127.0640&amp;goaly=37.5037" target="_blank" style="flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;color:#3A3336;text-decoration:none;font-size:14px;font-weight:700" style-hover="background:#EAE5E3"><span style="width:22px;height:22px;border-radius:5px;background:#fff;color:#E6007E;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:700">T</span>티맵</a>
+      </div>
+    </div>
+    <button onClick="{{ copyAddr }}" style="margin-top:12px;min-height:40px;padding:0 18px;border:1px solid rgba(255,255,255,.85);background:transparent;color:#fff;border-radius:20px;font-family:'Gowun Batang',serif;font-weight:700;font-size:13px;cursor:pointer" style-hover="background:rgba(255,255,255,.18)">주소 복사</button>
+    <div style="width:100%;margin-top:28px;border-top:1px solid rgba(255,255,255,.85);text-align:left;font-size:13px;line-height:1.75;font-weight:700">
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.85)">
+        <b style="border-right:1px solid rgba(255,255,255,.85);white-space:nowrap;padding-right:14px">지하철 이용 시</b>
+        <span>2호선 삼성역 2번 출구에서 도보 약 800m<br>3호선 학여울역 1번 출구에서 도보 약 940m</span>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.85)">
+        <b style="border-right:1px solid rgba(255,255,255,.85);white-space:nowrap;padding-right:14px">셔틀버스 이용 시</b>
+        <span>삼성역 3번 출구(2호선) 앞<br>학여울역 1번 출구(3호선) 앞</span>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.85)">
+        <b style="border-right:1px solid rgba(255,255,255,.85);white-space:nowrap;padding-right:14px">주차 안내</b>
+        <span>건물 내 주차 가능 (예식 시간 무료)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNTS -->
+  <section data-screen-label="10 Accounts" style="text-shadow:none;padding:40px 9% 110px;display:flex;flex-direction:column;align-items:center">
+    <h2 style="margin:0;font-family:'Pinyon Script',cursive;font-weight:400;font-size:52px;line-height:1;color:#FBF3EE">With gratitude</h2>
+    <div style="margin:12px 0 14px;font-size:14px;letter-spacing:.2em;margin-right:-.2em">마음 전하실 곳</div>
+    <p style="margin:0 0 30px;font-size:14px;line-height:1.8;text-align:center;text-wrap:pretty">참석이 어려우신 분들을 위해<br>계좌번호를 기재하였습니다.</p>
+    <div style="width:100%;display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ accountGroups }}" as="g" hint-placeholder-count="2">
+        <div style="width:100%;background:#FBF7F3;border-radius:14px;padding:8px;box-sizing:border-box;box-shadow:0 10px 28px rgba(150,80,80,.12)">
+          <div style="border:1px dashed #E3CFCC;border-radius:10px;overflow:hidden;color:#5E4E52">
+            <button onClick="{{ g.toggle }}" style="width:100%;min-height:58px;border:none;background:transparent;display:grid;grid-template-columns:28px 1fr 28px;align-items:center;padding:0 14px;cursor:pointer;font-family:'Gowun Batang',serif;font-size:16px;font-weight:700;color:#5E4E52">
+              <span style="color:#D9918B;font-size:13px">♥</span><span>{{ g.title }}</span><span style="font-size:11px;color:#C98E89;transform:{{ g.chev }};transition:transform .25s">▼</span>
+            </button>
+            <sc-if value="{{ g.open }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;padding:0 16px 6px">
+                <sc-for list="{{ g.items }}" as="a" hint-placeholder-count="2">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 2px;border-top:1px solid #EFE3E1;text-align:left">
+                    <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+                      <span style="font-size:13px;font-weight:700;color:#B9837E">{{ a.name }}</span>
+                      <span style="font-size:12px;color:#9C8A8D">{{ a.bank }}</span>
+                      <span style="font-size:14px;line-height:1.5;color:#6E5E62;white-space:nowrap">{{ a.num }}</span>
+                    </div>
+                    <button onClick="{{ a.copy }}" style="flex:none;min-height:36px;padding:0 16px;border:none;background:#D9918B;border-radius:18px;font-family:'Gowun Batang',serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer">복사</button>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- GUESTBOOK -->
+  <section data-screen-label="11 Guestbook" style="text-shadow:none;padding:40px 9% 80px;display:flex;flex-direction:column;align-items:center">
+    <h2 style="margin:0;font-family:'Pinyon Script',cursive;font-weight:400;font-size:52px;line-height:1;color:#FBF3EE">Guestbook</h2>
+    <div style="margin:12px 0 30px;font-size:14px;letter-spacing:.2em;margin-right:-.2em">방명록</div>
+    <div style="width:100%;background:#FBF7F3;border-radius:14px;padding:8px;box-sizing:border-box;box-shadow:0 10px 28px rgba(150,80,80,.12)">
+      <div style="border:1px dashed #E3CFCC;border-radius:10px;padding:6px 18px;color:#5E4E52">
+        <sc-if value="{{ gbEmpty }}" hint-placeholder-val="{{ true }}">
+          <div style="padding:46px 0;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="width:52px;height:52px;border-radius:50%;background:#F6E4E1;display:flex;align-items:center;justify-content:center;color:#D9918B;font-size:20px">♥</div>
+            <div style="font-family:'Pinyon Script',cursive;font-size:26px;color:#C98E89;line-height:1">With love</div>
+            <span style="font-size:14px;line-height:1.7;color:#8C7E81">두 사람에게 첫 번째 축하 글을<br>남겨주세요</span>
+          </div>
+        </sc-if>
+        <sc-for list="{{ gbList }}" as="m" hint-placeholder-count="0">
+          <div style="padding:20px 2px;border-bottom:1px solid #EFE3E1;display:flex;flex-direction:column;gap:8px;text-align:left">
+            <div style="font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:break-all;color:#6E5E62">{{ m.msg }}</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+              <span style="font-size:13px;font-weight:700;color:#B9837E">from. {{ m.name }}</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.06em;color:#B5A6A8">{{ m.date }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <sc-if value="{{ gbFormOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="width:100%;margin-top:14px;background:#FBF7F3;border-radius:14px;padding:22px 20px 18px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 28px rgba(150,80,80,.12)">
+        <div style="font-family:'Pinyon Script',cursive;font-size:26px;color:#C98E89;line-height:1;text-align:center">Leave a message</div>
+        <input value="{{ gbName }}" onChange="{{ gbSetName }}" maxLength="20" placeholder="이름" style="height:44px;border:none;border-bottom:1px solid #E3CFCC;background:transparent;padding:0 4px;font-family:'Gowun Batang',serif;font-size:15px;color:#5E4E52;outline:none">
+        <textarea value="{{ gbMsg }}" onChange="{{ gbSetMsg }}" maxLength="300" rows="4" placeholder="축하 메시지를 남겨주세요" style="border:1px solid #EADBD9;border-radius:10px;background:#fff;padding:12px 14px;font-family:'Gowun Batang',serif;font-size:15px;line-height:1.6;color:#5E4E52;outline:none;resize:none"></textarea>
+        <div style="display:flex;gap:8px">
+          <button onClick="{{ gbCancel }}" style="flex:1;height:46px;border:1px solid #E3CFCC;border-radius:23px;background:transparent;color:#9C8A8D;font-family:'Gowun Batang',serif;font-size:15px;cursor:pointer">취소</button>
+          <button onClick="{{ gbSubmit }}" style="flex:1;height:46px;border:none;border-radius:23px;background:#D9918B;color:#fff;font-family:'Gowun Batang',serif;font-size:15px;font-weight:700;cursor:pointer">등록하기</button>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ gbShowWrite }}" hint-placeholder-val="{{ true }}">
+      <button onClick="{{ gbOpen }}" style="margin-top:22px;height:48px;padding:0 34px;border:1px solid rgba(255,255,255,.95);border-radius:24px;background:transparent;color:#fff;font-family:'Gowun Batang',serif;font-size:15px;font-weight:700;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center;gap:8px" style-hover="background:rgba(255,255,255,.18)">축하 글 남기기 <span style="font-size:13px">♥</span></button>
+    </sc-if>
+  </section>
+
+  <!-- CLOSING -->
+  <section data-screen-label="12 Closing" style="text-shadow:none">
+    <div style="padding:0 9% 90px">
+      <a href="#" onClick="{{ sendFlower }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-radius:12px;padding:24px 22px 24px 26px;text-decoration:none;color:#7E6A6F;box-shadow:0 2px 10px rgba(150,90,90,.08)">
+        <div style="display:flex;flex-direction:column;gap:6px;text-align:left">
+          <span style="font-size:18px;font-weight:700">축하 화환 보내기</span>
+          <span style="font-size:14px;font-weight:400;color:#8C7E81">축하의 마음을 전해보세요</span>
+        </div>
+        <div style="width:64px;height:84px;flex:none"><img src="assets/wreath.png" alt="화환" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+      </a>
+    </div>
+    <div style="position:relative;aspect-ratio:4/2.1;overflow:hidden">
+      <image-slot id="closing-photo" src="assets/more3.jpg" shape="rect" placeholder="마무리 사진"></image-slot>
+      <div style="position:absolute;inset:0;background:rgba(40,30,30,.32);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-size:15px;line-height:1.7;font-weight:700;padding:0 20px;pointer-events:none">사랑해주시고, 축복해주신 모든 분들께 감사드리며<br>행복하게 잘 살겠습니다.</div>
+    </div>
+    <div style="background:#F1EDEB;padding:36px 20px 30px;display:flex;flex-direction:column;align-items:center;gap:6px;color:#3A3336">
+      <button onClick="{{ shareKakao }}" style="min-height:44px;border:none;background:transparent;display:flex;align-items:center;gap:10px;font-family:'Gowun Batang',serif;font-size:16px;font-weight:700;color:#3A3336;cursor:pointer"><img src="assets/icon-chat2.png" alt="" style="width:24px;height:24px;object-fit:contain">카카오톡 공유하기</button>
+      <button onClick="{{ copyLink }}" style="min-height:44px;border:none;background:transparent;display:flex;align-items:center;gap:10px;font-family:'Gowun Batang',serif;font-size:16px;font-weight:700;color:#3A3336;cursor:pointer"><img src="assets/icon-link2.png" alt="" style="width:22px;height:22px;object-fit:contain;margin:0 1px">링크주소 복사하기</button>
+      <div style="margin-top:16px;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:500;color:#8C8285;letter-spacing:.04em">Copyright 2027. 남훈 ♥ 예빈. All rights reserved.</div>
+    </div>
+  </section>
+
+  <!-- TOAST -->
+  <div style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY({{ toastY }});opacity:{{ toastOpacity }};transition:all .3s;background:rgba(60,35,32,.85);color:#fff;font-size:13px;padding:10px 18px;border-radius:20px;pointer-events:none;z-index:50">{{ toastMsg }}</div>
+
+  {{ petals }}
+
+  <audio ref="{{ audioRef }}" src="assets/bgm.mp3" loop="{{ true }}" preload="auto"></audio>
+  <sc-if value="{{ introDoneFlag }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ toggleMusic }}" aria-label="배경음악" style="position:fixed;top:14px;right:max(14px, calc(50% - 201px));z-index:45;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.85);background:rgba(236,182,177,.7);color:#fff;font-size:16px;cursor:pointer;text-shadow:none">{{ musicIcon }}</button>
+  </sc-if>
+
+  <!-- INTRO VIDEO -->
+  <sc-if value="{{ introShow }}" hint-placeholder-val="{{ true }}">
+    <div style="position:fixed;inset:0;z-index:90;background:#ECB6B1;display:flex;align-items:center;justify-content:center;opacity:{{ introOpacity }};transition:opacity 1.2s ease">
+      <video ref="{{ videoRef }}" src="assets/intro.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ endIntro }}" onError="{{ endIntro }}" style="width:100%;height:100%;max-width:430px;object-fit:cover;display:block"></video>
+      <sc-if value="{{ needTap }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ startIntro }}" style="position:absolute;inset:0;border:none;background:rgba(236,182,177,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#fff;cursor:pointer;font-family:'Gowun Batang',serif">
+          <span style="font-family:'Pinyon Script',cursive;font-size:44px;line-height:1">You're invited</span>
+          <span style="font-size:15px;font-weight:700;letter-spacing:.08em;border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:10px 22px">터치하여 청첩장 열기</span>
+        </button>
+      </sc-if>
+      <button onClick="{{ endIntro }}" style="position:absolute;right:16px;bottom:24px;min-height:40px;padding:0 16px;border:1px solid rgba(255,255,255,.8);border-radius:20px;background:rgba(0,0,0,.18);color:#fff;font-family:'Gowun Batang',serif;font-size:13px;cursor:pointer">건너뛰기</button>
+    </div>
+  </sc-if>
+
+  <!-- RSVP MODAL -->
+  <sc-if value="{{ rsvpOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:70;background:rgba(40,36,38,.72);display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;text-shadow:none;font-weight:400">
+      <div style="width:100%;max-width:380px;background:#fff;border:6px solid #EDEBEA;border-radius:4px;box-sizing:border-box;padding:40px 26px 22px;position:relative;color:#4A4245;font-family:'Gowun Batang',serif">
+        <button onClick="{{ closeRsvp }}" aria-label="닫기" style="position:absolute;top:14px;right:14px;width:44px;height:44px;border:none;background:transparent;font-size:28px;line-height:1;color:#333;cursor:pointer;font-weight:300">×</button>
+        <sc-if value="{{ rsvpIntro }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:0">
+            <h3 style="margin:0;text-align:center;font-size:21px;font-weight:700;color:#3A3336">참석 의사 전달</h3>
+            <p style="margin:20px 0 0;text-align:center;font-size:15px;line-height:1.85;color:#5A5256">축하의 마음으로 참석해주시는<br>모든 분들을 귀하게 모실 수 있도록<br>참석 의사를 전달 부탁드립니다.</p>
+            <div style="height:1px;background:#E6E1E2;margin:26px 0"></div>
+            <div style="display:flex;flex-direction:column;gap:14px;font-size:15px;padding:0 10px">
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:20px;text-align:center;font-size:17px">♡</span><b style="color:#3A3336">신랑 이남훈 &amp; 신부 김예빈</b></div>
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:20px;display:flex;justify-content:center"><span style="width:14px;height:13px;border:1.5px solid #4A4245;border-top-width:3px;border-radius:2px;box-sizing:border-box"></span></span><span>2027년 4월 10일 토요일 오후 5시</span></div>
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:20px;display:flex;justify-content:center"><span style="width:12px;height:12px;border:1.5px solid #4A4245;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-sizing:border-box"></span></span><span>더 채플 앳 대치</span></div>
+            </div>
+            <button onClick="{{ toForm }}" style="margin-top:34px;height:54px;border:none;border-radius:6px;background:#CFAFB1;color:#fff;font-family:'Gowun Batang',serif;font-size:17px;font-weight:700;cursor:pointer" style-hover="background:#C29EA1">참석 의사 전달하기</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ rsvpForm }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px;font-size:14px">
+            <h3 style="margin:0 0 4px;text-align:center;font-size:21px;font-weight:700;color:#3A3336">참석 의사 전달</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <button onClick="{{ sideGroom }}" style="height:44px;border-radius:6px;border:1px solid {{ groomBorder }};background:{{ groomBg }};color:#4A4245;font-family:inherit;font-size:14px;cursor:pointer">신랑측</button>
+              <button onClick="{{ sideBride }}" style="height:44px;border-radius:6px;border:1px solid {{ brideBorder }};background:{{ brideBg }};color:#4A4245;font-family:inherit;font-size:14px;cursor:pointer">신부측</button>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <button onClick="{{ attendYes }}" style="height:44px;border-radius:6px;border:1px solid {{ yesBorder }};background:{{ yesBg }};color:#4A4245;font-family:inherit;font-size:14px;cursor:pointer">참석</button>
+              <button onClick="{{ attendNo }}" style="height:44px;border-radius:6px;border:1px solid {{ noBorder }};background:{{ noBg }};color:#4A4245;font-family:inherit;font-size:14px;cursor:pointer">불참</button>
+            </div>
+            <input value="{{ rsvpName }}" onChange="{{ setName }}" placeholder="성함" style="height:46px;border:1px solid #E0DADB;border-radius:6px;padding:0 14px;font-family:inherit;font-size:15px;color:#3A3336;outline:none">
+            <div style="display:flex;align-items:center;justify-content:space-between;height:46px;border:1px solid #E0DADB;border-radius:6px;padding:0 6px 0 14px">
+              <span>동반 인원 (본인 포함)</span>
+              <div style="display:flex;align-items:center;gap:4px">
+                <button onClick="{{ decCount }}" style="width:36px;height:36px;border:none;background:#F4EFEF;border-radius:50%;font-size:18px;cursor:pointer;color:#4A4245">−</button>
+                <span style="min-width:26px;text-align:center;font-size:16px">{{ rsvpCount }}</span>
+                <button onClick="{{ incCount }}" style="width:36px;height:36px;border:none;background:#F4EFEF;border-radius:50%;font-size:18px;cursor:pointer;color:#4A4245">+</button>
+              </div>
+            </div>
+            <sc-if value="{{ rsvpError }}" hint-placeholder-val="{{ false }}"><div style="color:#C0616B;font-size:13px;text-align:center">성함을 입력해 주세요</div></sc-if>
+            <button onClick="{{ submitRsvp }}" style="margin-top:8px;height:54px;border:none;border-radius:6px;background:#CFAFB1;color:#fff;font-family:inherit;font-size:17px;font-weight:700;cursor:pointer" style-hover="background:#C29EA1">전달하기</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ rsvpDone }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px 0 20px;text-align:center">
+            <div style="font-size:30px;color:#CFAFB1">♡</div>
+            <h3 style="margin:0;font-size:20px;font-weight:700;color:#3A3336">전달되었습니다</h3>
+            <p style="margin:0;font-size:15px;line-height:1.8;color:#5A5256">소중한 마음 감사합니다.<br>예식 당일 뵙겠습니다.</p>
+            <button onClick="{{ closeRsvp }}" style="margin-top:14px;width:100%;height:54px;border:none;border-radius:6px;background:#CFAFB1;color:#fff;font-family:inherit;font-size:17px;font-weight:700;cursor:pointer">청첩장 보기</button>
+          </div>
+        </sc-if>
+        <button onClick="{{ toggleHide }}" style="margin:20px auto 0;display:flex;align-items:center;justify-content:center;gap:10px;border:none;background:transparent;color:#9A9396;font-family:inherit;font-size:15px;cursor:pointer;min-height:44px">
+          <span style="width:24px;height:24px;border-radius:50%;background:{{ hideDotBg }};color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center">✓</span>오늘 하루 보지 않기
+        </button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- LIGHTBOX -->
+  <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeLb }}" style="position:fixed;inset:0;z-index:60;background:rgba(30,18,17,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px">
+      <div onClick="{{ stop }}" onTouchStart="{{ touchStart }}" onTouchEnd="{{ touchEnd }}" style="width:min(92vw,400px);height:76vh;background-image:{{ lbBg }};background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div onClick="{{ stop }}" style="display:flex;align-items:center;gap:26px;color:#fff;font-family:'Cormorant Garamond',serif">
+        <button onClick="{{ prev }}" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;font-size:20px;cursor:pointer">‹</button>
+        <span style="font-size:16px;letter-spacing:.1em;min-width:56px;text-align:center">{{ lbCount }}</span>
+        <button onClick="{{ next }}" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;font-size:20px;cursor:pointer">›</button>
+      </div>
+      <button onClick="{{ closeLb }}" style="position:absolute;top:14px;right:14px;width:44px;height:44px;border:none;background:transparent;color:#fff;font-size:26px;cursor:pointer">×</button>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:402,&quot;height&quot;:860},&quot;galleryColumns&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;2&quot;,&quot;3&quot;],&quot;default&quot;:&quot;3&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Gallery&quot;},&quot;showSeconds&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Countdown&quot;}}">
+class Component extends DCLogic {
+  state = { now: Date.now(), printed: false, flash: false, lb: -1, toast: false };
+  target = new Date('2027-04-10T17:00:00+09:00').getTime();
+  memRatios = ['98/175','98/175','98/175','98/174','98/174','98/174','98/145','98/145','98/145','98/151','98/151','98/151'];
+  photos() {
+    const m = ['6837a.png','6830.jpg','6837b.png','6986.jpg','6900.jpg','6859.jpg','6540.jpg','6937.jpg','5798.jpg','6848b.png','g4.jpg','6847.jpg'].map(n => 'assets/mem/' + n);
+    return m.concat(['more1','more2','more-strip','more3','more4','more5'].map(n => 'assets/' + n + '.jpg'));
+  }
+  petalEl() {
+    if (this._petals) return this._petals;
+    const h = React.createElement;
+    const list = Array.from({ length: 22 }, (_, i) => {
+      const r = n => ((Math.sin(i * 97.3 + n * 13.1) + 1) / 2);
+      const size = 7 + r(1) * 7, dur = 9 + r(2) * 9, delay = -r(3) * 18;
+      return h('span', { key: i, style: { position: 'absolute', top: 0, left: (r(4) * 100) + '%', width: size, height: size * 0.72, background: 'linear-gradient(135deg,#FFE4E8,#F7B9C3)', borderRadius: '80% 0 80% 0', opacity: 0, animation: `petal ${dur}s linear ${delay}s infinite`, boxShadow: '0 0 2px rgba(255,255,255,.6)' } });
+    });
+    this._petals = h('div', { 'aria-hidden': true, style: { position: 'fixed', top: 0, bottom: 0, left: '50%', width: '100%', maxWidth: 430, transform: 'translateX(-50%)', overflow: 'hidden', pointerEvents: 'none', zIndex: 40 } }, list);
+    return this._petals;
+  }
+  toast(text, msg) {
+    navigator.clipboard && navigator.clipboard.writeText(text).catch(() => {});
+    this.setState({ toast: true, toastMsg: msg }); clearTimeout(this.tt); this.tt = setTimeout(() => this.setState({ toast: false }), 1800);
+  }
+  today() { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  rsvpVals() {
+    const s = this.state, on = '#CFAFB1', off = '#E0DADB';
+    const step = s.rsvp === undefined ? (localStorage.getItem('wedding-rsvp-hide') === this.today() ? null : 'intro') : s.rsvp;
+    const set = o => this.setState(o);
+    return {
+      rsvpOpen: !!step && !!s.introDone,
+      introShow: !s.introDone,
+      introDoneFlag: !!s.introDone,
+      videoRef: this.videoRef || (this.videoRef = React.createRef()),
+      audioRef: this.audioRef || (this.audioRef = React.createRef()),
+      needTap: !s.introStarted,
+      startIntro: () => this.startIntro(true),
+      musicIcon: s.musicOn ? '♪' : '✕',
+      toggleMusic: () => { const a = this.audioRef.current; if (!a) return; if (a.paused) { a.play().catch(() => {}); this.setState({ musicOn: true }); } else { a.pause(); this.setState({ musicOn: false }); } },
+      introOpacity: s.introFading ? 0 : 1,
+      endIntro: () => { if (this.state.introFading) return; this.setState({ introFading: true }); setTimeout(() => this.setState({ introDone: true }), 1200); setTimeout(() => this.observeReveal(), 300); }, rsvpIntro: step === 'intro', rsvpForm: step === 'form', rsvpDone: step === 'done',
+      closeRsvp: () => { if (s.hideToday) localStorage.setItem('wedding-rsvp-hide', this.today()); set({ rsvp: null }); },
+      toForm: () => set({ rsvp: 'form' }),
+      sideGroom: () => set({ side: 'g' }), sideBride: () => set({ side: 'b' }),
+      groomBorder: s.side === 'g' ? on : off, groomBg: s.side === 'g' ? '#F8EEEF' : '#fff',
+      brideBorder: s.side === 'b' ? on : off, brideBg: s.side === 'b' ? '#F8EEEF' : '#fff',
+      attendYes: () => set({ attend: 'y' }), attendNo: () => set({ attend: 'n' }),
+      yesBorder: s.attend !== 'n' ? on : off, yesBg: s.attend !== 'n' ? '#F8EEEF' : '#fff',
+      noBorder: s.attend === 'n' ? on : off, noBg: s.attend === 'n' ? '#F8EEEF' : '#fff',
+      rsvpName: s.rsvpName || '', setName: e => set({ rsvpName: e.target.value, rsvpError: false }),
+      rsvpCount: s.rsvpCount || 1,
+      decCount: () => set({ rsvpCount: Math.max(1, (s.rsvpCount || 1) - 1) }),
+      incCount: () => set({ rsvpCount: Math.min(10, (s.rsvpCount || 1) + 1) }),
+      rsvpError: !!s.rsvpError,
+      submitRsvp: () => (s.rsvpName || '').trim() ? set({ rsvp: 'done' }) : set({ rsvpError: true }),
+      toggleHide: () => set({ hideToday: !s.hideToday }),
+      hideDotBg: s.hideToday ? '#CFAFB1' : '#DCD8D9'
+    };
+  }
+  startIntro(fromTap) {
+    const v = this.videoRef && this.videoRef.current, a = this.audioRef && this.audioRef.current;
+    if (!a) return;
+    a.currentTime = 0;
+    return a.play().then(() => {
+      this.setState({ introStarted: true, musicOn: true });
+      v && v.play().catch(() => {});
+    }).catch(() => { if (fromTap) { this.setState({ introStarted: true }); v && v.play().catch(() => {}); } });
+  }
+  gbVals() {
+    const s = this.state;
+    if (!this.gbLoaded) { this.gbLoaded = true; try { this.gb = JSON.parse(localStorage.getItem('wedding-guestbook') || '[]'); } catch (e) { this.gb = []; } }
+    const list = this.gb || [];
+    return {
+      gbEmpty: list.length === 0,
+      gbList: list,
+      gbFormOpen: !!s.gbOpen,
+      gbShowWrite: !s.gbOpen,
+      gbName: s.gbName || '', gbMsg: s.gbMsg || '',
+      gbSetName: e => this.setState({ gbName: e.target.value }),
+      gbSetMsg: e => this.setState({ gbMsg: e.target.value }),
+      gbOpen: () => this.setState({ gbOpen: true }),
+      gbCancel: () => this.setState({ gbOpen: false, gbName: '', gbMsg: '' }),
+      gbSubmit: () => {
+        const name = (s.gbName || '').trim(), msg = (s.gbMsg || '').trim();
+        if (!name || !msg) return this.toast('', '이름과 메시지를 입력해 주세요');
+        const d = new Date();
+        this.gb = [{ name, msg, date: d.getFullYear() + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getDate()).padStart(2, '0') }, ...list];
+        localStorage.setItem('wedding-guestbook', JSON.stringify(this.gb));
+        this.setState({ gbOpen: false, gbName: '', gbMsg: '' });
+        this.toast('', '축하 글이 등록되었습니다');
+      }
+    };
+  }
+  rvScan() {
+    const vh = window.innerHeight;
+    document.querySelectorAll('section[data-screen-label] > *:not([data-rv])').forEach(el => {
+      el.dataset.rv = '1';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)';
+    });
+    if (!this.state.introDone && !this.state.introFading) return;
+    let n = 0;
+    document.querySelectorAll('[data-rv="1"]').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > 0) {
+        el.dataset.rv = 'in';
+        el.style.transitionDelay = Math.min(n++, 3) * 0.12 + 's';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    });
+  }
+  observeReveal() { this.rvScan(); }
+  componentDidMount() {
+    this.onScrollRv = () => this.rvScan();
+    window.addEventListener('scroll', this.onScrollRv, { passive: true, capture: true });
+    this.rvT = setInterval(() => this.rvScan(), 300);
+    setTimeout(() => this.startIntro(false), 100);
+    this.t = setInterval(() => this.setState({ now: Date.now() }), 1000);
+    this.io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.translate = '0 0'; this.io.unobserve(e.target); }
+    }), { threshold: 0.15 });
+    setTimeout(() => document.querySelectorAll('[data-reveal]').forEach(el => {
+      el.style.opacity = 0; el.style.translate = '0 18px'; el.style.transition = 'opacity .9s ease, translate .9s ease';
+      this.io.observe(el);
+    }), 50);
+    this.key = e => { if (this.state.lb < 0) return; if (e.key === 'Escape') this.setState({ lb: -1 }); if (e.key === 'ArrowRight') this.step(1); if (e.key === 'ArrowLeft') this.step(-1); };
+    window.addEventListener('keydown', this.key);
+  }
+  componentWillUnmount() { clearInterval(this.t); clearInterval(this.rvT); this.io && this.io.disconnect(); window.removeEventListener('keydown', this.key); window.removeEventListener('scroll', this.onScrollRv, true); }
+  step(d) { const n = this.photos().length; this.setState(s => ({ lb: (s.lb + d + n) % n })); }
+  open(i) { return () => this.setState({ lb: i }); }
+  push = () => {
+    if (this.state.printed) { this.setState({ printed: false }); return; }
+    this.setState({ flash: true });
+    setTimeout(() => this.setState({ flash: false, printed: true }), 180);
+  };
+  renderVals() {
+    const diff = Math.max(0, this.target - this.state.now);
+    const d = Math.floor(diff / 864e5), h = Math.floor(diff / 36e5) % 24, mi = Math.floor(diff / 6e4) % 60, se = Math.floor(diff / 1e3) % 60;
+    const p = n => String(n).padStart(2, '0');
+    const cells = [];
+    for (let i = 0; i < 4; i++) cells.push({ d: '', isDay: false, plain: true });
+    for (let i = 1; i <= 30; i++) cells.push({ d: i, isDay: i === 10, plain: i !== 10 });
+    const cols = Number(this.props.galleryColumns ?? 3);
+    const photos = this.photos();
+    const showDday = this.props.showSeconds ?? true;
+    const cd = [{ v: d, l: 'DAYS' }, { v: p(h), l: 'HOURS' }, { v: p(mi), l: 'MIN' }];
+    if (showDday) cd.push({ v: p(se), l: 'SEC' });
+    cd.forEach((u, i) => u.sep = i < cd.length - 1);
+    const lb = this.state.lb;
+    return {
+      ...this.rsvpVals(),
+      ...this.gbVals(),
+      petals: this.petalEl(),
+      toastMsg: this.state.toastMsg || '',
+      sendFlower: e => { e.preventDefault(); this.toast('', '화환 주문 링크를 연결해 주세요'); },
+      copyLink: () => this.toast(location.href, '링크가 복사되었습니다'),
+      shareKakao: () => {
+        const data = { title: '남훈 ♥ 예빈, 결혼합니다', text: '2027년 4월 10일 토요일 오후 5시 · 더 채플 앳 대치', url: location.href };
+        if (navigator.share) navigator.share(data).catch(() => {}); else this.toast(location.href, '링크가 복사되었습니다');
+      },
+      accountGroups: [
+        { k: 'g', title: '신랑측 계좌번호', items: [
+          { name: '이남훈', bank: '국민은행', num: '94320200053183' },
+          { name: '이근수', bank: '하나은행', num: '27191009103707' }] },
+        { k: 'b', title: '신부측 계좌번호', items: [
+          { name: '김예빈', bank: '국민은행', num: '73060204222194' },
+          { name: '김성일', bank: '국민은행', num: '730602.04.028044' }] }
+      ].map(g => ({ ...g, open: this.state.acc === g.k, chev: this.state.acc === g.k ? 'rotate(180deg)' : 'none',
+        toggle: () => this.setState(s => ({ acc: s.acc === g.k ? null : g.k })),
+        items: g.items.map(a => ({ ...a,
+          toss: 'supertoss://send?bank=' + encodeURIComponent(a.bank) + '&accountNo=' + a.num.replace(/\D/g, '') + '&origin=qr',
+          tossClick: () => { const t = Date.now(); setTimeout(() => { if (!document.hidden && Date.now() - t < 2500) this.toast(a.bank + ' ' + a.num.replace(/\D/g, ''), '토스 앱이 없어 계좌번호를 복사했습니다'); }, 1800); },
+          copy: () => this.toast(a.bank + ' ' + a.num + ' ' + a.name, '계좌번호가 복사되었습니다') })) })),
+      countdown: cd,
+      daysLeft: d,
+      push: this.push,
+      pushLabel: this.state.printed ? 'AGAIN' : 'PUSH',
+      stripTransform: this.state.printed ? 'translateY(0)' : 'translateY(-115%)',
+      stripTransition: this.state.printed ? 'transform 3.2s cubic-bezier(.45,.05,.3,1)' : 'transform .6s ease-in',
+      flashOpacity: this.state.flash ? 1 : 0,
+      showHint: !this.state.printed,
+      gridCols: 'repeat(' + cols + ',minmax(0,1fr))',
+      memory: this.memRatios.map((r, i) => ({ id: 'mem' + (i + 1), src: photos[i], ratio: r, gap: (cols === 3 && i >= 9) ? '22px' : '0', open: this.open(i) })),
+      openC1: this.open(12), openC2: this.open(13), openC3: this.open(14), openC4: this.open(15), openC5: this.open(16), openC6: this.open(17),
+      cells,
+      copyAddr: () => {
+        this.toast('서울특별시 강남구 영동대로 318', '주소가 복사되었습니다');
+      },
+      toastY: this.state.toast ? '0' : '20px',
+      toastOpacity: this.state.toast ? 1 : 0,
+      lbOpen: lb >= 0,
+      lbBg: lb >= 0 ? 'url(' + photos[lb] + ')' : 'none',
+      lbCount: (lb + 1) + ' / ' + photos.length,
+      closeLb: () => this.setState({ lb: -1 }),
+      stop: e => e.stopPropagation(),
+      prev: e => { e.stopPropagation(); this.step(-1); },
+      next: e => { e.stopPropagation(); this.step(1); },
+      touchStart: e => { this.tx = e.touches[0].clientX; },
+      touchEnd: e => { const dx = e.changedTouches[0].clientX - this.tx; if (Math.abs(dx) > 40) this.step(dx < 0 ? 1 : -1); }
+    };
+  }
+}
+</script>
+</body>
+</html>
