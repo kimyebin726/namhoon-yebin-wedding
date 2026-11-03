@@ -20,9 +20,9 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Gowun+Batang:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
 html,body{margin:0;background:#E4ABA6;-webkit-font-smoothing:antialiased}
+img{-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;touch-action:pan-y pinch-zoom}
 a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}50%{box-shadow:0 0 0 8px rgba(255,255,255,0)}}
 @keyframes petal{0%{transform:translate3d(0,-30px,0) rotate(0deg);opacity:0}8%{opacity:.95}25%{transform:translate3d(28px,25vh,0) rotate(90deg)}50%{transform:translate3d(-12px,52vh,0) rotate(200deg)}75%{transform:translate3d(34px,80vh,0) rotate(290deg)}92%{opacity:.9}100%{transform:translate3d(6px,108vh,0) rotate(380deg);opacity:0}}
@@ -87,7 +87,7 @@ a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
   <!-- GREETING -->
   <section data-screen-label="05 Greeting" style="position:relative;margin-top:30px">
     <div style="position:relative;aspect-ratio:402/590">
-      <image-slot id="illo" src="assets/illo.png" shape="rect" placeholder="line illustration"></image-slot>
+      <img src="assets/illo.png" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block">
       <div data-reveal="1" style="position:absolute;left:24%;right:24%;top:37.5%;height:16%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:min(2.6vw,11px);text-align:center;font-size:min(2.9vw,12px);line-height:1.6;color:#FFFDF8;pointer-events:none;white-space:nowrap">
         <p style="margin:0">풋풋했던 대학 시절에 만나,<br>다섯 번의 봄을 함께 맞이하며<br>서로의 꿈을 응원하고<br>일상의 기쁨과 슬픔을 나누었습니다.</p>
         <p style="margin:0">그리고 여섯 번째 봄,<br>이제는 부부로서 새로운 계절을 맞이합니다.<br>저희의 시작을 함께 축복해 주세요.</p>
@@ -102,7 +102,7 @@ a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
       <div style="display:grid;grid-template-columns:{{ gridCols }};gap:12px 12px">
         <sc-for list="{{ memory }}" as="m" hint-placeholder-count="12">
           <div onClick="{{ m.open }}" style="aspect-ratio:{{ m.ratio }};cursor:zoom-in;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-top:{{ m.gap }}">
-            <image-slot id="{{ m.id }}" src="{{ m.src }}" shape="rect" placeholder="photo"></image-slot>
+            <img src="{{ m.src }}" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block">
           </div>
         </sc-for>
       </div>
@@ -115,15 +115,15 @@ a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
     <h2 style="margin:0 0 50px;text-align:center;font-family:'Pinyon Script',cursive;font-weight:400;font-size:52px;color:#FBF3EE">More</h2>
     <div style="display:grid;grid-template-columns:minmax(0,201fr) minmax(0,115fr);gap:4px">
       <div style="display:grid;gap:4px">
-        <div onClick="{{ openC1 }}" style="aspect-ratio:202/125;cursor:zoom-in"><image-slot id="more1" src="assets/more1.jpg" shape="rect" placeholder="photo"></image-slot></div>
-        <div onClick="{{ openC2 }}" style="aspect-ratio:202/125;cursor:zoom-in"><image-slot id="more2" src="assets/more2.jpg" shape="rect" placeholder="photo"></image-slot></div>
+        <div onClick="{{ openC1 }}" style="aspect-ratio:202/125;cursor:zoom-in"><img src="assets/more1.jpg" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div onClick="{{ openC2 }}" style="aspect-ratio:202/125;cursor:zoom-in"><img src="assets/more2.jpg" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       </div>
-      <div onClick="{{ openC3 }}" style="cursor:zoom-in;position:relative;min-height:0;min-width:0"><div style="position:absolute;inset:0"><image-slot id="more-strip" src="assets/more-strip.jpg" shape="rect" placeholder="photo strip"></image-slot></div></div>
+      <div onClick="{{ openC3 }}" style="cursor:zoom-in;position:relative;min-height:0;min-width:0"><div style="position:absolute;inset:0"><img src="assets/more-strip.jpg" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
     </div>
     <div style="display:grid;grid-template-columns:minmax(0,86fr) minmax(0,114fr) minmax(0,115fr);gap:4px;margin-top:4px">
-      <div onClick="{{ openC4 }}" style="aspect-ratio:1;cursor:zoom-in"><image-slot id="more3" src="assets/more3.jpg" shape="rect" placeholder="photo"></image-slot></div>
-      <div onClick="{{ openC5 }}" style="aspect-ratio:114/86;cursor:zoom-in"><image-slot id="more4" src="assets/more4.jpg" shape="rect" placeholder="photo"></image-slot></div>
-      <div onClick="{{ openC6 }}" style="aspect-ratio:115/86;cursor:zoom-in"><image-slot id="more5" src="assets/more5.jpg" shape="rect" placeholder="photo"></image-slot></div>
+      <div onClick="{{ openC4 }}" style="aspect-ratio:1;cursor:zoom-in"><img src="assets/more3.jpg" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div onClick="{{ openC5 }}" style="aspect-ratio:114/86;cursor:zoom-in"><img src="assets/more4.jpg" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div onClick="{{ openC6 }}" style="aspect-ratio:115/86;cursor:zoom-in"><img src="assets/more5.jpg" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block"></div>
     </div>
   </section>
 
@@ -305,7 +305,7 @@ a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
       </a>
     </div>
     <div style="position:relative;aspect-ratio:4/2.1;overflow:hidden">
-      <image-slot id="closing-photo" src="assets/more3.jpg" shape="rect" placeholder="마무리 사진"></image-slot>
+      <img src="assets/more3.jpg" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block">
       <div style="position:absolute;inset:0;background:rgba(40,30,30,.32);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-size:15px;line-height:1.7;font-weight:700;padding:0 20px;pointer-events:none">사랑해주시고, 축복해주신 모든 분들께 감사드리며<br>행복하게 잘 살겠습니다.</div>
     </div>
     <div style="background:#F1EDEB;padding:36px 20px 30px;display:flex;flex-direction:column;align-items:center;gap:6px;color:#3A3336">
