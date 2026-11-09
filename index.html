@@ -86,12 +86,14 @@ a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
 
   <!-- GREETING -->
   <section data-screen-label="05 Greeting" style="position:relative;margin-top:30px">
-    <div style="position:relative;aspect-ratio:402/590">
-      <img src="assets/illo.png" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block">
-      <div data-reveal="1" style="position:absolute;left:24%;right:24%;top:37.5%;height:16%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:min(2.6vw,11px);text-align:center;font-size:min(2.9vw,12px);line-height:1.6;color:#FFFDF8;pointer-events:none;white-space:nowrap">
+    <div style="position:relative;aspect-ratio:402/618">
+     <div style="position:absolute;inset:0">
+      <img src="assets/illo3.png" alt="" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block">
+      <div data-reveal="1" style="position:absolute;left:18%;right:18%;top:35.6%;height:19.6%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:min(1.8vw,7px);text-align:center;font-size:min(2.55vw,11px);line-height:1.4;font-weight:700;color:#FFFDF8;pointer-events:none;white-space:nowrap">
         <p style="margin:0">풋풋했던 대학 시절에 만나,<br>다섯 번의 봄을 함께 맞이하며<br>서로의 꿈을 응원하고<br>일상의 기쁨과 슬픔을 나누었습니다.</p>
         <p style="margin:0">그리고 여섯 번째 봄,<br>이제는 부부로서 새로운 계절을 맞이합니다.<br>저희의 시작을 함께 축복해 주세요.</p>
       </div>
+     </div>
     </div>
   </section>
 
@@ -296,7 +298,7 @@ a{color:#fff;text-decoration:underline}a:hover{color:#FBF3EE}
   <!-- CLOSING -->
   <section data-screen-label="12 Closing" style="text-shadow:none">
     <div style="padding:0 9% 90px">
-      <a href="#" onClick="{{ sendFlower }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-radius:12px;padding:24px 22px 24px 26px;text-decoration:none;color:#7E6A6F;box-shadow:0 2px 10px rgba(150,90,90,.08)">
+      <a href="https://www.xn--js0b8yg5aly0d.com/goods/goods_list/cname/7LaV7ZWY7ZmU7ZmY" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-radius:12px;padding:24px 22px 24px 26px;text-decoration:none;color:#7E6A6F;box-shadow:0 2px 10px rgba(150,90,90,.08)">
         <div style="display:flex;flex-direction:column;gap:6px;text-align:left">
           <span style="font-size:18px;font-weight:700">축하 화환 보내기</span>
           <span style="font-size:14px;font-weight:400;color:#8C7E81">축하의 마음을 전해보세요</span>
@@ -416,7 +418,7 @@ class Component extends DCLogic {
   target = new Date('2027-04-10T17:00:00+09:00').getTime();
   memRatios = ['98/175','98/175','98/175','98/174','98/174','98/174','98/145','98/145','98/145','98/151','98/151','98/151'];
   photos() {
-    const m = ['6837a.png','6830.jpg','6837b.png','6986.jpg','6900.jpg','6859.jpg','6540.jpg','6937.jpg','5798v2.jpg','6848v2.jpg','g4v2.jpg','6847.jpg'].map(n => 'assets/mem/' + n);
+    const m = ['6837a.png','6830.jpg','6837b.png','6986.jpg','6900.jpg','6859.jpg','6540.jpg','6937.jpg','5798v2.jpg','6848v2.jpg','g4v4.jpg','6847.jpg'].map(n => 'assets/mem/' + n);
     return m.concat(['more1','more2','more-strip','more3','more4','more5'].map(n => 'assets/' + n + '.jpg'));
   }
   petalEl() {
@@ -433,6 +435,11 @@ class Component extends DCLogic {
   toast(text, msg) {
     navigator.clipboard && navigator.clipboard.writeText(text).catch(() => {});
     this.setState({ toast: true, toastMsg: msg }); clearTimeout(this.tt); this.tt = setTimeout(() => this.setState({ toast: false }), 1800);
+  }
+  SHEET_URL = 'PASTE_WEB_APP_URL_HERE';
+  post(data) {
+    if (!this.SHEET_URL.startsWith('https')) return;
+    fetch(this.SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) }).catch(() => {});
   }
   today() { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
   rsvpVals() {
@@ -464,7 +471,12 @@ class Component extends DCLogic {
       decCount: () => set({ rsvpCount: Math.max(1, (s.rsvpCount || 1) - 1) }),
       incCount: () => set({ rsvpCount: Math.min(10, (s.rsvpCount || 1) + 1) }),
       rsvpError: !!s.rsvpError,
-      submitRsvp: () => (s.rsvpName || '').trim() ? set({ rsvp: 'done' }) : set({ rsvpError: true }),
+      submitRsvp: () => {
+        const name = (s.rsvpName || '').trim();
+        if (!name) return set({ rsvpError: true });
+        this.post({ type: 'rsvp', side: s.side === 'b' ? '신부측' : (s.side === 'g' ? '신랑측' : '미선택'), attend: s.attend === 'n' ? '불참' : '참석', name, count: s.rsvpCount || 1 });
+        set({ rsvp: 'done' });
+      },
       toggleHide: () => set({ hideToday: !s.hideToday }),
       hideDotBg: s.hideToday ? '#CFAFB1' : '#DCD8D9'
     };
@@ -480,7 +492,10 @@ class Component extends DCLogic {
   }
   gbVals() {
     const s = this.state;
-    if (!this.gbLoaded) { this.gbLoaded = true; try { this.gb = JSON.parse(localStorage.getItem('wedding-guestbook') || '[]'); } catch (e) { this.gb = []; } }
+    if (!this.gbLoaded) {
+      this.gbLoaded = true; this.gb = [];
+      if (this.SHEET_URL.startsWith('https')) fetch(this.SHEET_URL).then(r => r.json()).then(l => { this.gb = Array.isArray(l) ? l : []; this.forceUpdate(); }).catch(() => {});
+    }
     const list = this.gb || [];
     return {
       gbEmpty: list.length === 0,
@@ -497,7 +512,7 @@ class Component extends DCLogic {
         if (!name || !msg) return this.toast('', '이름과 메시지를 입력해 주세요');
         const d = new Date();
         this.gb = [{ name, msg, date: d.getFullYear() + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getDate()).padStart(2, '0') }, ...list];
-        localStorage.setItem('wedding-guestbook', JSON.stringify(this.gb));
+        this.post({ type: 'guestbook', name, msg, date: this.gb[0].date });
         this.setState({ gbOpen: false, gbName: '', gbMsg: '' });
         this.toast('', '축하 글이 등록되었습니다');
       }
@@ -542,8 +557,23 @@ class Component extends DCLogic {
   componentWillUnmount() { clearInterval(this.t); clearInterval(this.rvT); this.io && this.io.disconnect(); window.removeEventListener('keydown', this.key); window.removeEventListener('scroll', this.onScrollRv, true); }
   step(d) { const n = this.photos().length; this.setState(s => ({ lb: (s.lb + d + n) % n })); }
   open(i) { return () => this.setState({ lb: i }); }
+  sfx() {
+    try {
+      const C = window.AudioContext || window.webkitAudioContext; if (!C) return;
+      const ac = this.ac || (this.ac = new C()); if (ac.state === 'suspended') ac.resume();
+      const t = ac.currentTime, sr = ac.sampleRate;
+      const noise = sec => { const b = ac.createBuffer(1, Math.floor(sr * sec), sr), d = b.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; const s = ac.createBufferSource(); s.buffer = b; return s; };
+      [0, 0.07].forEach((o, i) => {
+        const s = noise(0.06), f = ac.createBiquadFilter(), g = ac.createGain();
+        f.type = 'bandpass'; f.frequency.value = i ? 2400 : 3800; f.Q.value = 0.9;
+        g.gain.setValueAtTime(0.0001, t + o); g.gain.exponentialRampToValueAtTime(0.32, t + o + 0.004); g.gain.exponentialRampToValueAtTime(0.0001, t + o + 0.05);
+        s.connect(f).connect(g).connect(ac.destination); s.start(t + o);
+      });
+    } catch (e) {}
+  }
   push = () => {
     if (this.state.printed) { this.setState({ printed: false }); return; }
+    this.sfx();
     this.setState({ flash: true });
     setTimeout(() => this.setState({ flash: false, printed: true }), 180);
   };
@@ -566,7 +596,7 @@ class Component extends DCLogic {
       ...this.gbVals(),
       petals: this.petalEl(),
       toastMsg: this.state.toastMsg || '',
-      sendFlower: e => { e.preventDefault(); this.toast('', '화환 주문 링크를 연결해 주세요'); },
+      
       copyLink: () => this.toast(location.href, '링크가 복사되었습니다'),
       shareKakao: () => {
         const data = { title: '남훈 ♥ 예빈, 결혼합니다', text: '2027년 4월 10일 토요일 오후 5시 · 더 채플 앳 대치', url: location.href };
